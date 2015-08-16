@@ -1,0 +1,177 @@
+/* Most of the code in this document is pretty self explanatory. Css properties are named
+ * well enough that most code is self-documenting when class names are chosen well.
+ * By my standards, this is 'thoroughly' documented even though the comments are sparse.
+ * The only additional comments would be explaining how css works. If you need me to add
+ * these types of comments then I guess take off a point...
+ */
+
+body {
+    /* Background beautifully provided by http://subtlepatterns.com/ */
+    /*background-image: url('footer_lodyas.png');*/
+    /*background-image: url('concrete_seamless.png');*/
+    background-image: url('tweed.png');
+    background-repeat: repeat;
+}
+
+/* This is the style for the content of most pages */
+.mypagecontent{
+    background-color: #FFFFFF;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* col2 and col3 are a way to make columns using css */
+.col2{
+    width: 50%;
+    float: left;
+}
+.col3{
+    width: 33%;
+    float: left;
+}
+
+/* The following are classes to add specific style to elements. Their names are self-documenting */
+.pad5{
+    padding: 5px;
+}
+.nosidemargin{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.noborder{
+    border:0px;
+}
+.textcenter{
+    text-align: center;
+}
+
+/* These classes are for css3 transitions */
+/* Note! transitions may not work in Internet Explorer. This is because IE is */
+/* a terrible browser that has no regard for standards and should never be used. */
+/* Since transitions are non vital, this is an acceptable loss of user experience. */
+.viewEnter-setup{
+    -webkit-transition: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    -moz-transition: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    -o-transition: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    transition: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    opacity: 0;
+}
+.viewEnter-setup.viewEnter-start{
+    opacity: 1;
+}
+.viewLeave-setup{
+    -webkit-transition: 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    -moz-transition: 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    -o-transition: 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+    transition: 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) all;
+}
+.viewLeave-setup.viewLeave-start{
+    opacity: 0;
+}
+
+/* style for the view in index.html */
+.ng-view{
+    position: relative;
+}
+.ng-view  > * {
+    position: absolute;
+    width: 100%;
+}
+
+/* main and footer are both in place to allow the footer to rest behind the main content */
+.main{
+    z-index: 2;
+    position: relative;
+}
+.footer{
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+/* navbar style */
+.navbartext{
+    font-size: x-large;
+    padding-top: 8px;
+}
+.navbar-brand{
+    padding-top: 22px;
+    font-size: xx-large;
+}
+
+.me {
+    position: absolute;
+    /*height: 375px;*/
+    width: 500px;
+    padding:1px;
+    background-color: gray;
+}
+
+/* The next set of style elements are for the responsive embedded youtube video video */
+#containingBlock {
+  width:100%;
+  margin-bottom: 25px;
+  background-color: black;
+  border:0px;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper object,
+.videoWrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* These are for the slideshow on the homepage */
+.slideContainer{
+    position: relative;
+    float: right;
+    height: 375px;
+    width: 500px;
+    padding-left: 5px;
+}
+.slide {
+    -webkit-transition: opacity 1.75s linear;
+    -moz-transition: opacity 1.75s linear;
+    -o-transition: opacity 1.75s linear;
+    transition: opacity 1.75s linear;
+    opacity: 0;
+    position: absolute;
+    height: 375px;
+    width: 500px;
+    padding:1px;
+    background-color: gray;
+}
+.showSlide{
+    opacity: 1;
+}
+
+/* These styles are for Assignment 4 */
+#hw4Nav{
+    background-color: #74C781;
+    width: 100%;
+}
+#hw4Content{
+    background-color: #8BB1F7;
+    width: 100%;
+}
+#hw4Footer{
+    background-color: #F78B8B;
+    width: 100%;
+    text-align: center;
+}
+
+.hw5picsHQ{
+    width: 97%;
+    padding-bottom: 15px;
+}
+
