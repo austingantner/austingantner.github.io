@@ -97,40 +97,16 @@ body {
 }
 
 .me {
-  position: absolute;
-  /*height: 375px;*/
-  width: 500px;
+  max-width: 100%;
+  height: auto;
   padding: 1px;
   background-color: gray;
 }
 
 /* These are for the slideshow on the homepage */
 .slideContainer {
-  position: relative;
   float: right;
-  height: 325px;
-  width: 500px;
-  padding-left: 5px;
-}
-.fadedPosterContainer {
-  position: relative;
-  float: right;
-  height: 650px;
-  width: 500px;
-  padding-left: 5px;
-}
-.slide {
-  -webkit-transition: opacity 1.75s linear;
-  -moz-transition: opacity 1.75s linear;
-  -o-transition: opacity 1.75s linear;
-  transition: opacity 1.75s linear;
-  opacity: 0;
-  position: absolute;
-  height: 375px;
-  width: 500px;
-  padding: 1px;
-  background-color: gray;
-}
-.showSlide {
-  opacity: 1;
+  height: auto;
+  max-width: 500px;
+  padding: 5px;
 }
